@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Checker - Words With Friends Dictionary</title>
+	<meta name="description" content="Word Checker is a simple online dictionary for Words With Friends players.">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="container">
+		<h1>word checker</h1>
+		<input id="word" type="text">
+		<div id="footer">
+			<ul>
+				<li>by <a href="http://twitter.com/rmxdave">@rmxdave</a></li>
+				<li><a href="#">source code</a></li>
+				<li><a class="last" href="#">what is this?</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+	
+		$('#word').keyup(function(){
+			if ($(this).val().length > 0) {
+				search($(this).val());
+			}
+			else {
+				$('#word').removeClass('yup');
+				$('#word').removeClass('nope');
+			}
+		});
+	
+		function search(q) {
+			$.ajax({
+				url: 'words.txt',
+				success: function(words) {
+					var regex = new RegExp('\\b'+q+'\\b');
+					if (words.match(regex)) {
+						$('#word').removeClass('nope');
+						$('#word').addClass('yup');
+					}
+					else {
+						$('#word').removeClass('yup');
+						$('#word').addClass('nope');
+					}
+				}
+			});	
+		}
+	</script>
+</body>
+</html>
