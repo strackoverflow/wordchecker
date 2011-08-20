@@ -16,8 +16,8 @@ body {
 
 div#container {
 	margin: 30px auto;
-	max-width: 940px;
 	text-align: center;
+	width: 100%;
 }
 
 h1 {
