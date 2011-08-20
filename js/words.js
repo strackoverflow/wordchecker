@@ -16,7 +16,7 @@ $(document).ready(function(){
 		url: 'words.txt',
 		success: function(response) {
 			words = response;
-			$('#loading-shim').hide();
+			$('#loading').hide();
 			$('#word').focus();
 		}
 	});

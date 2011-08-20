@@ -14,14 +14,12 @@ body {
 	background: url(../img/bg.png);
 }
 
-div#loading-shim {
-	position: fixed;
-	background: #000;
-	width: 100%;
-	height: 3000px;
-	opacity: .7;
-	top: 0;
-	left: 0;
+p#loading {
+	margin: 0 0 12px 0;
+	font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #1b809d;
 }
 
 div#container {
