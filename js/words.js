@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	
+	$('#word').focus();	
+	
 	$('#word').keyup(function(){
 		if ($(this).val().length > 0) {
 			search($(this).val());
@@ -9,20 +12,24 @@ $(document).ready(function(){
 		}
 	});
 
+	var words = '';
+
+	$.ajax({
+		url: 'words.txt',
+		success: function(response) {
+			words = response;
+		}
+	});
+
 	function search(q) {
-		$.ajax({
-			url: 'words.txt',
-			success: function(words) {
-				var regex = new RegExp('\\b'+q+'\\b');
-				if (words.match(regex)) {
-					$('#word').removeClass('nope');
-					$('#word').addClass('yup');
-				}
-				else {
-					$('#word').removeClass('yup');
-					$('#word').addClass('nope');
-				}
-			}
-		});	
-	}	
+		var regex = new RegExp('\\b'+q+'\\b');
+		if (words.match(regex)) {
+			$('#word').removeClass('nope');
+			$('#word').addClass('yup');
+		}
+		else {
+			$('#word').removeClass('yup');
+			$('#word').addClass('nope');
+		}
+	}
 });
