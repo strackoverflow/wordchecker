@@ -10,6 +10,7 @@ $(document).ready(function(){
 		}
 	});
 
+	/* Queries the search.php script which will read the words.txt file */
 	function search(q) {
 		$.ajax({
 			url: 'search.php?find=' + encodeURIComponent(q),
