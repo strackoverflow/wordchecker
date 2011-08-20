@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Pacifico';
-    src: url('pacifico-webfont.eot');
-    src: url('pacifico-webfont.eot?#iefix') format('embedded-opentype'),
-         url('pacifico-webfont.woff') format('woff'),
-         url('pacifico-webfont.ttf') format('truetype'),
-         url('pacifico-webfont.svg#PacificoRegular') format('svg');
+    src: url('font/pacifico-webfont.eot');
+    src: url('font/pacifico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/pacifico-webfont.woff') format('woff'),
+         url('font/pacifico-webfont.ttf') format('truetype'),
+         url('font/pacifico-webfont.svg#PacificoRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
