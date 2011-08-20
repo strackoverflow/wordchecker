@@ -79,7 +79,9 @@ div#footer {
 	font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 	font-size: 12px;
 	text-align: center;
-	margin: 20px 0;
+	position: fixed;
+	bottom: 15px;
+	width: 100%;
 }
 
 div#footer ul {
