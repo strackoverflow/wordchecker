@@ -22,6 +22,7 @@ $(document).ready(function(){
 	});
 
 	function search(q) {
+		q = q.toLowerCase();
 		var regex = new RegExp('\\b'+q+'\\b');
 		if (words.match(regex)) {
 			$('#word').removeClass('nope');
