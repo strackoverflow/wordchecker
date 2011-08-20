@@ -7,17 +7,21 @@
 	<meta name="description" content="Word Checker is a simple online dictionary for Words With Friends players.">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
 	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/spin.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/words.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
+	<div id="loading-shim"></div>
 	<div id="container">
 		<h1>word checker</h1>
-		<input id="word" type="text" placeholder="Find a word...">
+		<div id="word-wrapper">
+			<input id="word" type="text" placeholder="Find a word...">
+		</div>
 		<div id="footer">
 			<ul>
 				<li>by <a href="http://twitter.com/rmxdave">@rmxdave</a></li>
-				<li><a href="https://github.com/rmxdave/wordchecker">source code</a></li>
-				<li><a class="last" href="#">what is this?</a></li>
+				<li><a class="last" href="https://github.com/rmxdave/wordchecker">source code</a></li>
+				<!-- <li><a class="last" href="#">what is this?</a></li> -->
 			</ul>
 		</div>
 	</div>

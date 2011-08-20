@@ -1,7 +1,5 @@
 $(document).ready(function(){
 	
-	$('#word').focus();	
-	
 	$('#word').keyup(function(){
 		if ($(this).val().length > 0) {
 			search($(this).val());
@@ -18,6 +16,8 @@ $(document).ready(function(){
 		url: 'words.txt',
 		success: function(response) {
 			words = response;
+			$('#loading-shim').hide();
+			$('#word').focus();
 		}
 	});
 
