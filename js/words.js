@@ -10,27 +10,14 @@ $(document).ready(function(){
 		}
 	});
 
-	var words = '';
-
-	$.ajax({
-		url: 'words.txt',
-		success: function(response) {
-			words = response;
-			$('#loading').hide();
-			$('#word').focus();
-		}
-	});
-
 	function search(q) {
-		q = q.toLowerCase();
-		var regex = new RegExp('\\b'+q.trim()+'\\b');
-		if (words.match(regex)) {
-			$('#indicator').removeClass('nope');
-			$('#indicator').addClass('yup');
-		}
-		else {
-			$('#indicator').removeClass('yup');
-			$('#indicator').addClass('nope');
-		}
+		$.ajax({
+			url: 'search.php?find=' + encodeURIComponent(q),
+			success: function(cssClass) {
+				$('#indicator').addClass(cssClass);
+				var opposite = (cssClass === 'yup') ? 'nope' : 'yup';
+				$('#indicator').removeClass(opposite);
+			}
+		});
 	}
 });
