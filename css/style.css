@@ -26,7 +26,6 @@ h1 {
 	text-align: center;
 	color: #1b809d;
 	text-shadow: 3px 3px #99d9eb;
-/*	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.2)), to(rgba(0,0,0,1)));*/
 	margin: 0;
 	padding: 0;
 }
@@ -72,6 +71,7 @@ div#footer a {
 	color: #1b809d;
 	font-weight: bold;
 	padding: 0 5px;
+	margin: 0;
 	border-right: 1px solid #ccc;
 }
 
@@ -79,6 +79,10 @@ div#footer a:hover {
 	text-decoration: underline;
 }
 
+div#footer a.first {
+	border-left: none;
+}
+
 div#footer a.last {
-	border: none;
+	border-right: none;
 }
