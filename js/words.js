@@ -5,8 +5,8 @@ $(document).ready(function(){
 			search($(this).val());
 		}
 		else {
-			$('#word').removeClass('yup');
-			$('#word').removeClass('nope');
+			$('#indicator').removeClass('yup');
+			$('#indicator').removeClass('nope');
 		}
 	});
 
@@ -25,12 +25,12 @@ $(document).ready(function(){
 		q = q.toLowerCase();
 		var regex = new RegExp('\\b'+q.trim()+'\\b');
 		if (words.match(regex)) {
-			$('#word').removeClass('nope');
-			$('#word').addClass('yup');
+			$('#indicator').removeClass('nope');
+			$('#indicator').addClass('yup');
 		}
 		else {
-			$('#word').removeClass('yup');
-			$('#word').addClass('nope');
+			$('#indicator').removeClass('yup');
+			$('#indicator').addClass('nope');
 		}
 	}
 });

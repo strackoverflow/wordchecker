@@ -25,7 +25,7 @@ p#loading {
 div#container {
 	margin: 30px auto;
 	text-align: center;
-	width: 320px;
+	width: 100%;
 }
 
 h1 {
@@ -38,25 +38,41 @@ h1 {
 	padding: 0;
 }
 
+div#input-container {
+	width: 90%;
+	margin: 0 auto;
+}
+
 div#word-wrapper {
-	padding: 0 10px;
+	background: #fff;
+	border-radius: 8px;
+	border: 1px solid #eee;
+}
+
+div#indicator {
+	display: block;
+	height: 25px;
+	width: 25px;
+	float: right;
+	padding: 10px 20px 0 0;
 }
 
 input#word {
-	border-radius: 8px;
-	border: 1px solid: #eee;
+	width: 80%;
 	font-size: 20px;
 	padding: 4px 8px;
-	width: 90%;
 	outline: none;
+	background: transparent;
+	border: 0px;
+	float: left;
 }
 
-input#word.yup {
-	background: #fff url(../img/check.png) 285px center no-repeat;
+#indicator.yup {
+	background: url(../img/check.png) center center no-repeat;
 }
 
-input#word.nope {
-	background: #fff url(../img/nope.png) 285px center no-repeat;
+#indicator.nope {
+	background: url(../img/nope.png) center center no-repeat;
 }
 
 div#footer {
