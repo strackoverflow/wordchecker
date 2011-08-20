@@ -5,6 +5,7 @@
 	<meta name="description" content="Word Checker is a simple online dictionary for Words With Friends players.">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
 	<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/words.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 	<div id="container">
@@ -18,34 +19,5 @@
 			</ul>
 		</div>
 	</div>
-	<script type="text/javascript" charset="utf-8">
-	
-		$('#word').keyup(function(){
-			if ($(this).val().length > 0) {
-				search($(this).val());
-			}
-			else {
-				$('#word').removeClass('yup');
-				$('#word').removeClass('nope');
-			}
-		});
-	
-		function search(q) {
-			$.ajax({
-				url: 'words.txt',
-				success: function(words) {
-					var regex = new RegExp('\\b'+q+'\\b');
-					if (words.match(regex)) {
-						$('#word').removeClass('nope');
-						$('#word').addClass('yup');
-					}
-					else {
-						$('#word').removeClass('yup');
-						$('#word').addClass('nope');
-					}
-				}
-			});	
-		}
-	</script>
 </body>
 </html>
