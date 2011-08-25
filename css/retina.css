@@ -1,0 +1,7 @@
+#indicator.yup {
+	background: url(../img/2x/check.png) center center no-repeat;
+}
+
+#indicator.nope {
+	background: url(../img/2x/nope.png) center center no-repeat;
+}
