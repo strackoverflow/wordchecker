@@ -65,6 +65,7 @@ input#word {
 	background: transparent;
 	border: 0px;
 	float: left;
+	-webkit-appearance: none;
 }
 
 #indicator.yup {
