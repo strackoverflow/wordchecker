@@ -16,10 +16,15 @@
 	  _gaq.push(['_trackPageview']);
 
 	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
+
+	  // Support for iPhone 4 inch sceen
+	  if (window.screen.height == 568) { 
+		  document.querySelector("meta[name=viewport]").content="width=320.1";
+	  }
 
 	</script>
 	<link rel="apple-itouch-icon" href="/apple-touch-icon.png" />
@@ -31,11 +36,11 @@
 		<h1>word checker</h1>
 		<div id="input-container">
 			<div id="word-wrapper">
-				<input id="word" type="text" placeholder="Find a word..." autocorrect="off" autocapitalize="off">
+				<input id="word" type="text" placeholder="Find a word...">
 				<div id="indicator"></div>
 				<div style="clear:both"></div>
 			</div>
-			
+
 		</div>
 		<div id="footer">
 			<ul>
