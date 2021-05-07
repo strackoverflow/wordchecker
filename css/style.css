@@ -28,6 +28,14 @@ div#container {
 	width: 100%;
 }
 
+.alert {
+	font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	text-align: center;
+	background-color: lightyellow;
+	padding: 10px;
+	border-radius: 8px;
+}
+
 h1 {
 	font-family: "Pacifico";
 	font-size: 3em;
